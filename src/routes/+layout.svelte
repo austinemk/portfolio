@@ -14,7 +14,7 @@
 		name="description"
 		content="Austine Mark is a product-focused software engineer building scalable, AI-powered digital systems from interface to infrastructure."
 	/>
-	<meta name="google-site-verification" content="wGnWdxJW0n_0iN3_8aVAI500jWHCermXzlnXD19kudg" />
+	<meta name="google-site-verification" content="SuKdyYLeKsPsvdvAqSG-guG4fvanUlvywxRmNxIF-tg" />
 	<link rel="icon" type="image/x-icon" href={favicon} />
 </svelte:head>
 
