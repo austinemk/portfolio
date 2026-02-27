@@ -9,17 +9,17 @@
 
 <svelte:head>
 	<meta charset="utf-8" />
-	<title>About Me</title>
+	<title>About Austine Mark</title>
 	<meta
 		name="description"
-		content="Futuristic full stack developer based in Kenya, building intelligent, user-focused web and AI solutions for global impact. Explore sleek, scalable apps by ctrlN3rd."
+		content="Austine Mark is a product-focused software engineer building scalable, AI-powered digital systems from interface to infrastructure."
 	/>
 	<meta name="google-site-verification" content="wGnWdxJW0n_0iN3_8aVAI500jWHCermXzlnXD19kudg" />
 	<link rel="icon" type="image/x-icon" href={favicon} />
 </svelte:head>
 
 <Header />
-<div class="row-span-6 w-full flex-1 border-y border-y-gray-100/20">
+<div class="h-[80dvh] w-full overflow-hidden">
 	{@render children()}
 </div>
 <Footer />

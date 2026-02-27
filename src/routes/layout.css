@@ -1,25 +1,50 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+@theme {
+	--color-accent: #c6a0f6;
+	--color-text: #cad3f5;
+	--color-overlay: #6e738d;
+	--color-base: #24273a;
+}
+
 body {
 	/* 1. Layout */
-	@apply grid h-dvh w-dvw grid-rows-8 gap-0 overflow-hidden text-sm font-light text-gray-300;
+	@apply flex h-dvh w-dvw flex-col justify-between gap-0 overflow-hidden text-sm text-text;
 	font-family: 'Space Mono', monospace;
 
 	background:
-		url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
-		radial-gradient(circle at 50% 50%, #1a1c1c 0%, #0a0a0a 100%);
+		url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+		/*radial-gradient(circle at 50% 50%, #1e2030 0%, #11111b 100%)*/ #111111;
 
 	/* This makes the grain subtle and "embedded" into the color */
 	background-blend-mode: overlay;
 	opacity: 0.98;
 }
 
-h1,
-h2,
-h3 {
-	font-weight: 900;
-}
 .btn {
-	@apply bg-linear-to-b from-gray-500/20 from-70% to-transparent to-70%;
+	@apply bg-linear-to-b from-text/20 from-70% to-transparent to-70% backdrop-blur-2xl;
+}
+.curved {
+	@apply rounded-full border-2 border-x-text border-y-transparent px-5 py-2;
+}
+@layer components {
+	.square-framed {
+		@apply relative px-8 py-6;
+
+		/* The "Start" Square (Top Left) */
+		&::before {
+			content: '';
+			@apply absolute top-0 left-0 size-3 bg-accent;
+			/* Optional: adds a soft glow to match your backdrop-blur theme */
+			@apply shadow-[0_0_10px_rgba(198,160,246,0.5)];
+		}
+
+		/* The "End" Square (Bottom Right) */
+		&::after {
+			content: '';
+			@apply absolute right-0 bottom-0 size-3 bg-accent;
+			@apply shadow-[0_0_10px_rgba(198,160,246,0.5)];
+		}
+	}
 }
