@@ -21,7 +21,7 @@
 			email</a
 		>
 		<div class="h-px flex-1 bg-text"></div>
-		<a href="https://github.com/austinemk/" class="flex items-center gap-0.5 underline">
+		<a href="https://www.linkedin.com/in/austine-mark/" class="flex items-center gap-0.5 underline">
 			<div class="aspect-square w-2 bg-accent"></div>
 			linkedin</a
 		>
