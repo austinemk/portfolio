@@ -2,7 +2,7 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--color-accent: #c6a0f6;
+	--color-accent: #94e2d5;
 	--color-text: #cad3f5;
 	--color-overlay: #6e738d;
 	--color-base: #24273a;
@@ -10,7 +10,7 @@
 
 body {
 	/* 1. Layout */
-	@apply flex h-dvh w-dvw flex-col justify-between gap-0 overflow-hidden text-sm text-text;
+	@apply flex h-dvh w-dvw flex-col justify-between gap-0 overflow-x-hidden overflow-y-auto text-sm text-text;
 	font-family: 'Space Mono', monospace;
 
 	background:

@@ -1,34 +1,40 @@
 <script lang="ts">
-	import { ArrowDown, Mail } from 'lucide-svelte';
+	import { ArrowDown, ChevronDown, Mail, Github } from 'lucide-svelte';
 </script>
 
-<div class="relative flex h-full w-full flex-col items-center justify-center gap-0 py-10">
-	<div
-		class="col-span-3 flex h-full w-full flex-col items-center justify-center gap-5 overflow-hidden border-x border-base pb-10"
-	>
-		<div class="flex w-full items-center justify-center gap-1 border-l border-l-base">
-			<div
-				class="flex flex-col gap-0 text-[10dvw] leading-none font-extrabold uppercase max-sm:text-[20dvw]"
-			>
-				<span class="">Pro</span>
-				<div class="h-0.5 w-full bg-base"></div>
-				<span>duct</span>
-			</div>
-			<div class="flex flex-col justify-between">
-				<img src="./me.jpg" alt="me" class="w-[10dvw] max-sm:w-[25dvw]" />
-				<div class="self-end font-extralight">engineer</div>
-			</div>
-		</div>
+<div
+	class="relative flex h-[90dvh] max-w-2/5 flex-col items-start justify-center gap-5 leading-4 font-semibold max-sm:max-w-3/4"
+>
+	<h3 class="text-lg font-bold text-accent">/ get about</h3>
+	<img
+		src="./about.png"
+		alt="me"
+		class="aspect-square w-[10dvw] self-start rounded-full max-sm:w-[25dvw]"
+	/>
+	<h3>Hey I'm <span class="text-accent">Austine,</span></h3>
+	<p>
+		I specializing in <span class="text-accent"
+			>Cloud, Devops and Site reliability engineering.</span
+		>
+	</p>
 
-		<div class="tex-lg font-semibold">[ Austine Mark ]</div>
-	</div>
+	<p>Technologies am familiar with:</p>
 
-	<!--short description-->
-	<div class="flex max-w-2/5 items-start gap-1 self-start pl-[10%] leading-4 max-sm:max-w-3/4">
-		<span class="mt-3 aspect-square w-4 bg-accent lg:w-4"></span>
-		<div class="text-lg font-semibold">
-			I’m <span class="text-accent">Austine Mark</span>, a product-focused software engineer
-			building scalable, AI-powered digital systems — from interface to infrastructure.
-		</div>
+	<ul class="ml-5 flex list-disc flex-col items-start gap-2">
+		<li>Programming languages - golang, python, typescript</li>
+		<li>OS - linux</li>
+		<li>pipeline - CI/CD</li>
+		<li>Iac - terraform</li>
+		<li>Cloud providers - aws, gcp,</li>
+	</ul>
+
+	<p>
+		In my free time I'm nerdy about tech, linux, tech movies. Currently active in linux community
+	</p>
+
+	<div>
+		<a href="https://github.com/austinemk"
+			><img src="./github.png" alt="github" class="aspect-square w-5" /></a
+		>
 	</div>
 </div>

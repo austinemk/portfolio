@@ -2,8 +2,6 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.ico';
 	import '@fontsource/space-mono';
-	import Header from './Header.svelte';
-	import Footer from './Footer.svelte';
 	let { children } = $props();
 </script>
 
@@ -18,8 +16,4 @@
 	<link rel="icon" type="image/x-icon" href={favicon} />
 </svelte:head>
 
-<Header />
-<div class="h-[80dvh] w-full overflow-hidden">
-	{@render children()}
-</div>
-<Footer />
+{@render children()}
