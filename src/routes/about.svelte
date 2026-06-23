@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Github, Mail } from 'lucide-svelte';
+	import { ArrowBigRight } from 'lucide-svelte';
 	import { glitch } from '$lib/glitch'; // Adjust the import path if your setup is different
 </script>
 
 <div
-	class="relative flex min-h-[90dvh] w-full flex-col items-start justify-center gap-2 leading-relaxed font-medium"
+	class="relative flex min-h-[90dvh] w-full flex-col items-start justify-start gap-2 leading-relaxed font-medium"
 >
 	<!-- Terminal Command Title -->
 	<h3 use:glitch={{ mode: 'loop', speed: 40 }} class="text-lg font-bold tracking-wider text-accent">
@@ -34,36 +34,39 @@
 
 	<!-- Skills Section -->
 	<div class="w-full space-y-2">
-		<p use:glitch={{ mode: 'once' }} class="text-sm font-bold tracking-wide text-accent">
+		<!--<p use:glitch={{ mode: 'once' }} class="text-sm font-bold tracking-wide text-accent">
 			// Technologies & Paradigms
-		</p>
+		</p>-->
 
-		<ul class="ml-4 flex list-disc flex-col items-start gap-2 italic">
+		<ul class="flex list-[square] flex-col items-start gap-2 pl-6">
 			<li>
-				<span>AI & Intelligent Automation </span> LLM agents for DevOps, AIOps, Runbook Automation
+				<span class="font-bold">AI & Intelligent Automation -> </span> LLM agents for DevOps, AIOps, Runbook
+				Automation
 			</li>
-			<li>Programming Languages - Go, Python, TypeScript</li>
-			<li>Kernel - Linux</li>
-			<li>Containerization & Orchestration - Docker, Kubernetes</li>
-			<li>CI/CD & Workflow Automation - GitHub Actions, Automated Pipelines</li>
-			<li>Infrastructure as Code - Terraform</li>
-			<li>Cloud Providers: AWS, GCP</li>
+			<li><span class="font-bold">AProgramming Languages -> Go, Python, TypeScript</span></li>
+			<li><span class="font-bold">Kernel -> </span> Linux</li>
+			<li>
+				<span class="font-bold">Containerization & Orchestration -> </span> Docker, Kubernetes
+			</li>
+			<li>
+				<span class="font-bold">CI/CD & Workflow Automation -> </span> Actions, Automated Pipelines
+			</li>
+			<li><span class="font-bold">Infrastructure as Code -></span> Terraform</li>
+			<li><span class="font-bold">Cloud Providers -></span> AWS, GCP</li>
 		</ul>
 	</div>
 
 	<!-- Computer Science Foundation Line -->
-	<p>
+	<!--<p>
 		As a computer science graduate I have strong foundation in <span class="font-semibold"
 			>Data Structures & Algorithms, Operating Systems, Networking Protocols (TCP/IP, DNS, HTTP),</span
 		> and distributed system design.
-	</p>
+	</p>-->
 
 	<!-- Context Paragraph -->
 	<p class="leading-normal">
-		In my free time, I'm nerdy about tech, deep-diving into Linux configurations, and experimenting
-		with AI-driven automation systems. Currently, I am an active contributor and member of the <span
-			class="text-accent">Linux community</span
-		>.
+		As a computer science graduate. In my free time, I'm nerdy about tech, deep-diving into Linux
+		configurations, and experimenting with AI-driven automation systems
 	</p>
 
 	<!-- Social Connections -->
@@ -83,7 +86,7 @@
 			class="transition-colors hover:text-accent"
 			aria-label="Email Me"
 		>
-			<Mail class="h-6 w-6" />
+			<img src="./mail.png" alt="mail" class="aspect-square w-6" />
 		</a>
 	</div>
 </div>
