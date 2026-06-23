@@ -10,7 +10,7 @@
 
 body {
 	/* 1. Layout */
-	@apply flex h-dvh w-dvw flex-col justify-between gap-0 overflow-x-hidden overflow-y-auto text-sm text-text;
+	@apply flex h-dvh w-dvw flex-col items-center justify-between gap-0 overflow-x-hidden overflow-y-auto text-sm text-text;
 	font-family: 'Space Mono', monospace;
 
 	background:
