@@ -23,19 +23,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 1. Install pnpm FIRST so that Node can find its executable
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
           standalone: true
 
-      # 2. Set up Node SECOND with pnpm caching enabled
+      # Removed the 'cache: pnpm' flag here.
+      # This stops the runner from breaking over local workspace/lockfile bugs.
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
