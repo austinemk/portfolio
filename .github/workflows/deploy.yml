@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 'main'
+    branches: ['main']
 
 permissions:
   contents: read
@@ -13,6 +13,8 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+workflow_dispatch:
+
 env:
   CI: true # Forces non-interactive mode so it never hangs waiting for prompts
 
@@ -22,7 +24,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 8 # Fail quickly if an infinite loop triggers instead of burning free minutes
+    timeout-minutes: 3 # Fail quickly if an infinite loop triggers instead of burning free minutes
 
     steps:
       - name: Checkout
@@ -45,6 +47,9 @@ jobs:
       # Removed explicit sync step as 'pnpm run build' handles this natively
       - name: Build Site
         run: pnpm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
