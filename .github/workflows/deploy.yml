@@ -23,23 +23,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-
+      # 1. Install pnpm FIRST so that Node can find its executable
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
           standalone: true
 
+      # 2. Set up Node SECOND with pnpm caching enabled
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile # Kept this to keep you unblocked on the lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Generate SvelteKit Files
-        run: pnpm svelte-kit sync # Fixes the tsconfig.json missing error
+        run: pnpm svelte-kit sync
 
       - name: Build Site
         run: pnpm run build
