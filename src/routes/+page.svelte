@@ -24,11 +24,9 @@
 
 	<p>
 		<span class="text-accent">```</span><br />
-		I specialize in <span class="text-accent">cloud</span>,
-		<span class="text-accent">devops</span>
-		and <span class="text-accent"> site reliability </span> engineering. As a computer science
-		graduate in my free time .I'm nerdy about tech, deep-diving into Linux configurations and
-		experimenting with AI-driven automation
+		I am a Cloud and DevOps Engineer. By day, I build, manage, and automate scalable infrastructure. By
+		night, I'm a terminaldwelling tech nerd richening Linux dotfiles, self-hosting automated pipelines,
+		and architecting seamless cloud migrations just for the fun of it.
 		<br />
 		<span class="text-accent">```</span>
 	</p>

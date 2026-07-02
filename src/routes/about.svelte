@@ -3,19 +3,33 @@
 	import { glitch } from '$lib/glitch';
 	import TreeLine from './treeLine.svelte'; // Make sure this path matches your file structure
 
-	// 1. Corrected TypeScript Array Type definition
+	// Lean, high-impact categories
 	let specializations: Array<{ id: string; title: string; content: string }> = [
 		{
 			id: '01',
-			title: 'AI & Intelligent Automation',
-			content: 'LLM agents for DevOps, AIOps, Runbook Automation'
+			title: 'Cloud Architecture & Migration',
+			content: 'AWS, GCP, Linux Systems, Enterprise Migrations'
 		},
-		{ id: '02', title: 'Programming Languages', content: 'Go, Python, TypeScript' },
-		{ id: '03', title: 'Kernel', content: 'Linux' },
-		{ id: '04', title: 'Containerization & Orchestration', content: 'Docker, Kubernetes' },
-		{ id: '05', title: 'CI/CD & Workflow Automation', content: 'Actions, Automated Pipelines' },
-		{ id: '06', title: 'Infrastructure as Code', content: 'Terraform' },
-		{ id: '07', title: 'Cloud Providers', content: 'AWS, GCP' }
+		{
+			id: '02',
+			title: 'Infrastructure as Code & Containers',
+			content: 'Terraform, Docker, Kubernetes (K8s)'
+		},
+		{
+			id: '03',
+			title: 'CI/CD & Workflow Automation',
+			content: 'GitHub Actions, Bash Scripting, Git, Automated Pipelines'
+		},
+		{
+			id: '04',
+			title: 'AI & Intelligent Automation',
+			content: 'LLM agents for DevOps, AIOps, Self-Healing Systems'
+		},
+		{
+			id: '05',
+			title: 'Programming Languages',
+			content: 'Go, Python, TypeScript'
+		}
 	];
 </script>
 
