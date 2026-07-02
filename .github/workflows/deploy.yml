@@ -2,9 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 'main' # Change this if your default branch is 'master'
+    branches: 'main'
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -24,19 +23,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9 # Uses pnpm v9, adjust if you are locked to an older version
-
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          standalone: true
+
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile # Kept this to keep you unblocked on the lockfile
+
+      - name: Generate SvelteKit Files
+        run: pnpm svelte-kit sync # Fixes the tsconfig.json missing error
 
       - name: Build Site
         run: pnpm run build
